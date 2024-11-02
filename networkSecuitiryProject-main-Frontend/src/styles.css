@@ -1,0 +1,55 @@
+input[type="number_C"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  width: 12.70em;
+  font-size: 1em;
+}
+
+.input-wrapper, input[type="number_C"] {
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: .3em;
+}
+
+.input-wrapper {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: .2em;
+  font-size: 150%;
+}
+
+.input-wrapper:after {
+  content: "——————";
+  line-height: .3em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#partitioned {
+  padding-left: 15px;
+  letter-spacing: 42px;
+  border: 0;
+  background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 50px 1px;
+  background-repeat: repeat-x;
+  background-position-x: 35px;
+  width: 290px;
+  outline : none;
+}
+#divInner{
+  left: 0;
+  position: sticky;
+}
+
+#divOuter{
+  width: 190px; 
+  overflow: hidden;
+}

@@ -1,0 +1,43 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.0'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.example'
+version = '0.0.1-SPRINT4'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+bootJar {
+   archiveFileName = "spring-boot.jar"
+}
+dependencies {
+//	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'mysql:mysql-connector-java:8.0.26'	
+    
+    implementation 'org.apache.lucene:lucene-core:8.10.1'
+    
+    //email dependencies
+  //  implementation 'javax.mail:javax.mail-api:1.6.2'
+      implementation 'com.sun.mail:javax.mail:1.6.2'
+  //  implementation 'javax.mail'
+   // implementation 'jakarta.mail'
+    implementation 'com.sun.activation:javax.activation:1.2.0'
+	
+	//runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+ext['spring-framework.version'] = '6.0.8'
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
